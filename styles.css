@@ -380,8 +380,18 @@ body {
 }
 
 @media (min-width: 885px) and (max-width: 1116px) {
-  .sticker__block--after:after {left: -50px;}
-  .sticker-wrapper:after {right: -50px;}
+  .sticker__block--after:after {
+    background-image: url(img/arr_down.png);
+    transform: rotate(90deg);
+    left: -120px;
+    bottom: -200px;
+  }
+  .sticker-wrapper:after {
+    background-image: url(img/arr_down.png);
+    transform: scale(-1,1) rotate(90deg);
+    bottom: -190px;
+    right: -140px;
+  }
 }
 
 @media (max-width: 885px) {
@@ -458,6 +468,14 @@ body {
   }
 
   .button--red {padding: 10px 76px;}
+
+  nav {
+    flex-direction: column;
+    margin-left: 30%;
+    margin-bottom: 40px;
+  }
+
+  .about-footer {width: 70%;}
 
 }
 
