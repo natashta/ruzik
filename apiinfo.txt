@@ -1,0 +1,69 @@
+подключить скрипт https://api.provereno.org/v1/provereno.js
+инициализировать в html коде:
+<script>
+	provereno.init({key: 'Открытый ключ', project: 'Название проекта по умолчанию'});
+</script>
+
+при отправке формы сделать запрос
+provereno.check_code({ code: 'Введенный пользователем код', project: 'Название проекта, если другое, чем в init'}, function(result) {
+	// result.data.token - используется для отправки формы данных выигрывших пользователей
+
+});
+
+в случае выигрыша показать форму для заполнения данных, которую отправить в виде
+provereno.post_user_data({ token: 'token из ответа check_code', userdata: '{field: value, name:"Иван",tel:"+79161231230",...}'}, function(result) {
+	//userdata формируется JSON.stringify(object);
+
+});
+
+Проекты и данные:
+
+#1 После проверки кода - его же можно проверять снова, он не помечается как использованный
+project: PROMOTEST
+key: FA872702639645DC89F0FC1BE900591B
+code:
+094447621 – Выигрыш: кружка.
+560932457 – Выигрыш: без выигрыша.
+663411678 – Выигрыш: путешествие в Париж на двоих.
+773287364 – Выигрыш: без выигрыша.
+571157555 – Выигрыш: бейсболка.
+
+
+#2
+project: RUZIK
+key: 44548963-ff68-4a4a-89ec-9e71db0807ca
+userdata: {fio: "Иванов Иван Иванович", tel: "+79161231230", email: "ivanov@mail.ru"}
+code:
+
+#с выигрышем
+
+UGxH1X6K7BQq
+8ZivzfGBnW7x
+P3INPKpCsIN9
+PyMcCI51e8U3
+zoS87BHokS3A
+
+tu8NLIUCwEhm
+WkVXdPTv6z7M
+
+CPeaBsOj6p6T
+13CafkTQzROT
+
+#без выигрыша
+CVkq7JyQ5Xzi
+MCaKFBDTYB9e
+5ed5ScmW3vkl
+h0vIZgrdoZah
+7jKYwI36b8WM
+Y4bBxbE6NDxo
+2brifdq1DAuq
+ztZ9E2aopGDC
+bHvg5qP9XAj7
+7auRvBddgpVm
+NUYmEG03nUTu
+vP1z6J4BHara
+AalGFRWiCsFC
+qgmKtwYKCeLN
+xjTHOnufAjmi
+rRXWcD66F0eQ
+

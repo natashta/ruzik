@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <script>
+      provereno.init({key: 'Открытый ключ', project: 'Название проекта по умолчанию'});
+    </script>
   </head>
 
   <body>
@@ -69,10 +72,10 @@
       
       <p class="sticker__todo">Введите промо код и получите свой подарок!</p>
       
-        <form class="sticker__form" action="action.php" method="get">
+        <form class="sticker__form" action="action.php" method="post">
           <p class="sticker__field"><input type="text" id="code-field" placeholder="поле для ввода кода"></p>
           <p class="sticker__button">
-            <a href="#" class="sticker__button button button--red">Получить приз</a>
+            <a href="#" class="sticker__button button button--red">Получить&nbsp;приз</a>
           </p>
         </form>
       
@@ -88,7 +91,7 @@
 
     <section class="modal modal-parent">
       <div class="modal__popup">
-        <p class="modal__content"></p>
+        <p class="modal__content">Такой код не найден <br> Проверьте правильность ввода</p>
         <button class="modal__close" type="button">&times;
           <span class="visually-hidden">Закрыть</span>
         </button>
@@ -158,6 +161,6 @@
   </div>
   <script src="open.js"></script>   
   <script src="https://api.provereno.org/v1/provereno.js"></script>
-  <script type="text/javascript">provereno.init({key:"FA872702639645DC89F0FC1BE900591B"});</script>
+  <script type="text/javascript">provereno.init({key:"44548963-ff68-4a4a-89ec-9e71db0807ca", project: "RUZIK"});</script>
   </body>
 </html>

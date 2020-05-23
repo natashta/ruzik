@@ -117,7 +117,7 @@ body {
   width: 40%;
   min-height: 22px;
   align-self: center;
-  background: -webkit-gradient(linear, left center, right center, from(#D44243),color-stop(100%, rgba(212,66,67,0)));
+  background: -webkit-gradient(linear, left center, right center, from(#D44243), color-stop(100%, rgba(212,66,67,0)));
   background: -webkit-linear-gradient(left,#D44243 ,rgba(212,66,67,0) 100%);
   background: linear-gradient(to right,#D44243 ,rgba(212,66,67,0) 100%);
 }
@@ -253,16 +253,16 @@ body {
     padding-bottom: 20px;
   }
 
-  .sticker__form {padding: 20px 40px 40px 20px;}
+  .sticker__form {padding: 20px 20px 40px 20px;}
 
-  .sticker__field {width: 60%;}
+  .sticker__field {width: 65%;}
   .sticker__form input {
     width: 100%; 
     padding: 10px 20px 10px 20px; 
     font-size: 22px;
   }
 
-  .description {margin: 20px; margin-bottom: 60px;}
+  .description {margin-bottom: 60px;}
   
   .site-map{
     margin: 0 auto; 
@@ -379,6 +379,13 @@ body {
   font-size: 42px;
 }
 
+.modal__content {
+  color: #6A6A6A;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 5em;
+}
+
 @media (min-width: 885px) and (max-width: 1116px) {
   .sticker__block--after:after {
     background-image: url(img/arr_down.png);
@@ -404,6 +411,15 @@ body {
     margin-left: 60px;
     margin-right: 60px;
   }
+
+  .sticker__block--full {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  .description {max-width: 80%; margin: 0 auto; margin-bottom: 60px;}
+
   .sticker__block {margin: 20px; margin-bottom: 40px;}
 
   .lead__img p:before {
@@ -428,6 +444,7 @@ body {
     bottom: -200px;
   }
 
+  .sticker__field {width: 55%;}
   .button--red {padding: 10px 40px;}
 }
 
@@ -479,7 +496,7 @@ body {
 
 }
 
-@media (max-width: 362px) {
+@media (max-width: 440px) {
   .sticker__block--full button {font-size: 20px; min-width: 260px;}
 
   .button--red {padding: 10px 56px;}
