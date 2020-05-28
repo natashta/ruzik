@@ -6,7 +6,7 @@ let parent = document.querySelector(".modal-parent");
 let closer = document.querySelector(".modal__close");
 let text = document.querySelector(".modal__content");
 let submitForm = document.querySelector(".modal__form");
-let formMessage = document.querySelector(".sticker__off");
+let formMessage = document.querySelector(".modal__success");
 let formButton = document.querySelector(".modal__button");
 let name = document.getElementById('name');
 let email = document.getElementById('email');
@@ -14,6 +14,10 @@ let phone = document.getElementById('phone');
 
 button.addEventListener("click", function(evt) {
     evt.preventDefault();
+	
+	 if (!formMessage.classList.contains("sticker__off")) {
+        formMessage.classList.add("sticker__off")
+    }
     parent.classList.add("modal-show");
     popup.classList.add("modal-show");
 		text.innerHTML = "<br><br><br><br>";
@@ -45,15 +49,24 @@ button.addEventListener("click", function(evt) {
 closer.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	parent.classList.remove("modal-show");
-    popup.classList.remove("modal-show");
+  popup.classList.remove("modal-show");
 });
 			
 function submit(t, evt) {
     		evt.preventDefault();
-    		formMessage.classList.remove("sticker__off");
-    		submitForm.classList.remove("form-show");
+    		 if (formMessage.classList.contains("sticker__off")) {
+                formMessage.classList.remove("sticker__off");
+            }
+            if (submitForm.classList.contains("form-show")){
+                submitForm.classList.remove("form-show");
+						}
     		let userdata = {fio:name.value, tel:phone.value, email:email.value};
 				let res = JSON.stringify(userdata);
-				console.log({ token: t, userdata: res.toString()});
-				provereno.post_user_data({ token: t, userdata: res});
+				
+				provereno.post_user_data(
+					{ 
+						token: t,
+						userdata: 	JSON.stringify(userdata)
+					}, function(result) { console.log(result) } 
+					);
    }
