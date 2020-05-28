@@ -15,7 +15,10 @@ let phone = document.getElementById('phone');
 button.addEventListener("click", function(evt) {
     evt.preventDefault();
 	
-	 if (!formMessage.classList.contains("sticker__off")) {
+if (submitForm.classList.contains("form-show")){
+        submitForm.classList.remove("form-show");
+     }
+if (!formMessage.classList.contains("sticker__off")) {
         formMessage.classList.add("sticker__off")
     }
     parent.classList.add("modal-show");
@@ -69,4 +72,7 @@ function submit(t, evt) {
 						userdata: 	JSON.stringify(userdata)
 					}, function(result) { console.log(result) } 
 					);
+		name.value = ""; 
+		phone.value = "";
+		email.value = "";
    }
