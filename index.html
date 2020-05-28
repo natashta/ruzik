@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section class="sticker__block--full sticker">
+    <section id="checkform" class="sticker__block--full sticker">
       <p class="sticker__num">6</p>
       
       <p class="sticker__todo">Введите промо код и получите свой подарок!</p>
@@ -77,8 +77,8 @@
           <p class="sticker__button">
             <a href="#" class="sticker__button button button--red">Получить&nbsp;приз</a>
           </p>
+          
         </form>
-      
     </section>
 
     <section class="description">
@@ -91,8 +91,30 @@
 
     <section class="modal modal-parent">
       <div class="modal__popup">
-        <p class="modal__content">Такой код не найден <br> Проверьте правильность ввода</p>
-        <button class="modal__close" type="button">&times;
+        <p class="modal__content"></p>
+        <div class="modal__wrapper">
+          <p class="modal__prize"></p>
+          <form class="modal__form" method="post" action="#checkform">
+            <div class="modal__field">
+              <label class="modal__label" for="name">Имя</label>
+              <input class="modal__input" type="text" id="name" required>
+            </div>
+            
+            <div class="modal__field">
+              <label class="modal__label" for="email">E-mail</label>
+              <input class="modal__input" type="email" id="email" required>
+            </div>
+
+            <div class="modal__field">
+              <label class="modal__label" for="phone">Телефон</label>
+              <input class="modal__input" type="tel" id="phone" required>
+            </div>
+            
+            <button class="modal__button button" type="submit">Отправить</button> 
+          </form> 
+          <p class="modal__success sticker__off">Спасибо, ваши данные отправлены</p>
+        </div>
+          <button class="modal__close" type="button">&times;
           <span class="visually-hidden">Закрыть</span>
         </button>
       </div>

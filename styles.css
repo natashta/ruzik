@@ -336,7 +336,7 @@ body {
   display: none;
   max-width: 90%;
   width: 800px;
-  height: 300px; 
+  max-height: 400px; 
   position: fixed;
   top: 0;
   bottom: 0;
@@ -380,10 +380,60 @@ body {
 }
 
 .modal__content {
-  color: #6A6A6A;
+  color: #F15A24;
   font-size: 24px;
   text-align: center;
-  margin-top: 5em;
+  margin-top: 2em;
+}
+
+.modal__prize {
+  color: #F15A24;
+  font-size: 24px;
+  text-align: center;}
+
+.modal__form {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 40px;
+  display:none;
+}
+
+.modal__field {
+  display: flex;
+  border-bottom: 1px solid #cfcece;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 0 0 10px 80px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.modal__label {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  line-height: 1;
+  color: #6A6A6A;; 
+}
+
+.modal__button {
+  background-color: #D64B40; 
+  min-width: 200px; 
+  padding: 8px 10px;
+  margin-top:20px;
+  font-size: 18px;
+}
+
+.modal__success {color: #6A6A6A; padding: 80px 0 20px 20px; text-align: center;}
+.sticker__off {display:none;}
+.form-show {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 885px) and (max-width: 1116px) {
