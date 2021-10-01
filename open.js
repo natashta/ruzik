@@ -52,7 +52,7 @@ if (!formMessage.classList.contains("sticker__off")) {
 closer.addEventListener("click", function(evt) {
 	evt.preventDefault();
 	parent.classList.remove("modal-show");
-  popup.classList.remove("modal-show");
+  	popup.classList.remove("modal-show");
 });
 			
 function submit(t, evt) {
